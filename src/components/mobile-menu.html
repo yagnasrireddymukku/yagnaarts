@@ -1,0 +1,65 @@
+<!--
+  Full-screen mobile navigation panel. Hidden by default; opened by
+  js/modules/navigation.js toggling the `is-open` class and trapping focus.
+  Nested categories use native <details>/<summary> so the accordion behavior
+  and keyboard support come from the browser, not custom JS.
+-->
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mobile-menu__header">
+    <span class="logo-text">Yagna<em>Arts</em></span>
+    <button class="icon-btn" id="mobileMenuClose" aria-label="Close menu">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <nav class="mobile-menu__nav" aria-label="Mobile">
+    <details class="mobile-accordion">
+      <summary>Shop</summary>
+      <div class="mobile-accordion__body">
+        <a href="/pages/shop.html">All Products</a>
+        <a href="/pages/shop.html?sort=bestsellers">Best Sellers</a>
+        <a href="/pages/shop.html?sort=new">New Arrivals</a>
+      </div>
+    </details>
+    <details class="mobile-accordion">
+      <summary>Collections</summary>
+      <div class="mobile-accordion__body">
+        <a href="/collections/personalized-gifts/">Personalized Gifts</a>
+        <a href="/collections/wedding-collection/">Wedding Collection</a>
+        <a href="/collections/home-decor/">Home Decor</a>
+        <a href="/collections/kitchen-collection/">Kitchen Collection</a>
+        <a href="/collections/office-collection/">Office Collection</a>
+        <a href="/collections/jewelry/">Jewelry</a>
+        <a href="/collections/keychains/">Keychains</a>
+        <a href="/collections/bookmarks/">Bookmarks</a>
+        <a href="/collections/name-stands/">Name Stands</a>
+        <a href="/collections/storage-organizers/">Storage &amp; Organizers</a>
+        <a href="/collections/uv-resin/">UV Resin</a>
+        <a href="/collections/baby-collection/">Baby Collection</a>
+        <a href="/collections/pet-collection/">Pet Collection</a>
+        <a href="/collections/religious-collection/">Religious Collection</a>
+        <a href="/collections/corporate-gifts/">Corporate Gifts</a>
+        <a href="/collections/memory-preservation/">Memory Preservation</a>
+        <a href="/collections/festival-collection/">Festival Collection</a>
+        <a href="/collections/luxury-collection/">Luxury Collection</a>
+        <a href="/collections/limited-edition/">Limited Edition</a>
+        <a href="/collections/seasonal-collection/">Seasonal Collection</a>
+      </div>
+    </details>
+    <a class="mobile-menu__link" href="/pages/custom-orders.html">Custom Orders</a>
+    <a class="mobile-menu__link" href="/pages/wedding-gifting.html">Wedding</a>
+    <a class="mobile-menu__link" href="/pages/corporate-gifting.html">Corporate</a>
+    <a class="mobile-menu__link" href="/blog/">Blog</a>
+    <a class="mobile-menu__link" href="/pages/about.html">About</a>
+    <a class="mobile-menu__link" href="/pages/contact.html">Contact</a>
+  </nav>
+
+  <div class="mobile-menu__footer">
+    <button class="icon-btn" id="mobileSearchToggle" aria-label="Search"><i class="bi bi-search" aria-hidden="true"></i></button>
+    <a class="icon-btn" href="/pages/wishlist.html" aria-label="Wishlist"><i class="bi bi-heart" aria-hidden="true"></i></a>
+    <a class="icon-btn" href="/pages/cart.html" aria-label="Cart"><i class="bi bi-bag" aria-hidden="true"></i></a>
+    <button class="icon-btn" id="mobileThemeToggle" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i></button>
+    <a class="icon-btn" href="https://wa.me/910000000000" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop" hidden></div>

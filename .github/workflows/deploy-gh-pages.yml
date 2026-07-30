@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+# OPTIONAL — only relevant if you choose GitHub Pages as your host (see
+# docs/phase-15-deployment-guide.md for why Netlify/Vercel/Cloudflare Pages
+# are recommended first). To activate this workflow:
+#   1. Repo Settings -> Pages -> Source: "GitHub Actions"
+#   2. Push to main — this workflow builds the site and publishes it
+#
+# Unlike Netlify/Vercel/Cloudflare Pages (which run `npm run build`
+# automatically when connected to the repo), GitHub Pages needs an explicit
+# Action to build the site and hand the output to actions/deploy-pages.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/build.js
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          # Everything a static host needs to serve — source folders
+          # (/src, /scripts, /docs, /data) are excluded since robots.txt
+          # already disallows crawling them and they aren't linked from
+          # any page; excluding them here just keeps the deployed artifact
+          # smaller.
+          path: '.'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

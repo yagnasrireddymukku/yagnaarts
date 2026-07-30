@@ -1,0 +1,69 @@
+/*
+  Self-hosted webfonts — replaces the Google Fonts CDN <link> used through
+  Phase 8-12. Self-hosting removes a render-blocking third-party origin
+  round-trip (DNS + TLS to fonts.googleapis.com/fonts.gstatic.com) and lets
+  us preload exactly the two files needed for the largest above-the-fold
+  text (see the <link rel="preload"> tags each page's <head> now carries).
+
+  Only the specific weight/style pairs actually used anywhere in the
+  site's CSS are included — Latin-subset woff2, ~23KB or less each:
+    Playfair Display  700 normal (headings)   + 600 italic (accent/em)
+    Poppins           400 / 500 / 600 / 700 normal (body/UI weights)
+    Cormorant Garamond 400 italic (pull-quotes/testimonials)
+*/
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/playfair_normal_700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/playfair_italic_600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cormorant_italic_400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/poppins_normal_400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/poppins_normal_500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/poppins_normal_600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/poppins_normal_700.woff2') format('woff2');
+}

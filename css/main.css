@@ -1,0 +1,36 @@
+/*
+  YagnaArts stylesheet entry point.
+  Load order matters (ITCSS-style: tokens -> reset -> layout -> components -> pages)
+  so later files can rely on cascade order rather than specificity hacks.
+
+  Bootstrap 5's own CSS is linked separately, BEFORE this file, in every page's
+  <head> — this file only ever adds to or overrides Bootstrap, never duplicates it.
+*/
+
+@import url("base/fonts.css");
+@import url("base/tokens.css");
+@import url("base/reset.css");
+
+@import url("layout/grid.css");
+@import url("layout/footer.css");
+
+@import url("components/preloader.css");
+@import url("components/navigation.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/tabs.css");
+@import url("components/accordion.css");
+@import url("components/timeline.css");
+@import url("components/forms.css");
+
+@import url("pages/home.css");
+
+/*
+  Deliberately NOT imported here: pages/shop.css, pages/product.css, and the
+  rest of /css/pages/*.css. Per the ITCSS boundary in docs/phase-7 — page CSS
+  is genuinely specific to one template, so each template links its own
+  pages/*.css file directly (see product.template.html, shop.html) instead
+  of every page downloading every other page's CSS through this file.
+  home.css is the sole exception: home.html is linked from here because the
+  homepage is the one page every visitor loads first, and its CSS is small.
+*/

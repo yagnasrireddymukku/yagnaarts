@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t=localStorage.getItem('ya-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
+<title>Wedding Gifting &amp; Return Gifts | YagnaArts</title>
+<meta name="description" content="Consistent, gift-worthy wedding return gifts and bridal keepsakes — bulk-ready, sample-before-you-commit, and personalized to your wedding date and names.">
+<link rel="canonical" href="https://yagnasrireddymukku.github.io/yagnaarts/pages/wedding-gifting.html">
+<meta name="theme-color" content="#0E3A5F">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wedding Gifting &amp; Return Gifts | YagnaArts">
+<meta property="og:description" content="Consistent, gift-worthy wedding return gifts and bridal keepsakes — bulk-ready, sample-before-you-commit, and personalized to your wedding date and names.">
+<meta property="og:image" content="https://images.pexels.com/photos/7400865/pexels-photo-7400865.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<meta property="og:url" content="https://yagnasrireddymukku.github.io/yagnaarts/pages/wedding-gifting.html">
+<meta property="og:site_name" content="YagnaArts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wedding Gifting &amp; Return Gifts | YagnaArts">
+<meta name="twitter:description" content="Consistent, gift-worthy wedding return gifts and bridal keepsakes — bulk-ready, sample-before-you-commit, and personalized to your wedding date and names.">
+<meta name="twitter:image" content="https://images.pexels.com/photos/7400865/pexels-photo-7400865.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/brand/apple-touch-icon.png">
+<link rel="preload" href="/fonts/playfair_normal_700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins_normal_400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/pages/shop.css">
+<link rel="stylesheet" href="/css/pages/custom-orders.css">
+</head>
+<body>
+
+<!-- include:header -->
+
+<main id="main">
+<div class="container" style="padding-top:1.5rem;">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Wedding Gifting</li>
+    </ol>
+  </nav>
+</div>
+  <section class="shop-hero" style="background-image:linear-gradient(rgba(13,13,16,.55),rgba(13,13,16,.35)), url('https://images.pexels.com/photos/7400865/pexels-photo-7400865.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+    <div class="container">
+      <span class="eyebrow">Wedding Gifting</span>
+      <h1>Return gifts your guests actually keep</h1>
+      <p>Bridal keepsakes and consistent, bulk-ready return gifts — personalized with your names and wedding date, sampled before you commit to a full batch.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-check2-square" aria-hidden="true"></i></div>
+          <h3>Sample before you commit</h3>
+          <p>We send one finished piece for your approval before casting the full batch.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i></div>
+          <h3>Consistency at scale</h3>
+          <p>50 or 500 — every piece in the batch matches, tested during production.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></div>
+          <h3>Deadline-aware production</h3>
+          <p>Tell us your wedding date upfront — we confirm feasibility before you order.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-tags" aria-hidden="true"></i></div>
+          <h3>Bulk pricing</h3>
+          <p>Per-piece pricing drops at volume — ask for a quote based on your guest count.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="row-head">
+        <div class="section-head" style="margin-bottom:0;">
+          <span class="eyebrow">Popular for Weddings</span>
+          <h2 class="section-title">Bridal &amp; return-gift favorites</h2>
+        </div>
+        <a class="btn btn-outline btn-sm" href="/collections/wedding-collection/">View collection &rarr;</a>
+      </div>
+      <div class="scroller">{{#each weddingProducts}}{{> product-card}}{{/each}}</div>
+    </div>
+  </section>
+
+  <section class="section" id="bulk-inquiry">
+    <div class="container">
+      <div class="custom-orders-grid">
+        <div>
+          <h2 class="section-title" style="margin-bottom:1.5rem;">Request a Wedding Gifting Quote</h2>
+          <form id="weddingInquiryForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <input type="text" id="wgName" name="name" placeholder=" " required autocomplete="name">
+                <label for="wgName">Your name</label>
+              </div>
+              <div class="form-field">
+                <input type="date" id="wgDate" name="weddingDate" placeholder=" ">
+                <label for="wgDate">Wedding date</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <input type="number" id="wgQty" name="quantity" placeholder=" " min="1" required>
+                <label for="wgQty">Number of pieces needed</label>
+              </div>
+              <div class="form-field">
+                <input type="tel" id="wgPhone" name="phone" placeholder=" " required autocomplete="tel">
+                <label for="wgPhone">Phone number</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <input type="email" id="wgEmail" name="email" placeholder=" " required autocomplete="email">
+              <label for="wgEmail">Email address</label>
+            </div>
+            <div class="form-field">
+              <textarea id="wgNotes" name="notes" placeholder=" "></textarea>
+              <label for="wgNotes">Anything else we should know?</label>
+            </div>
+            <input type="text" name="company" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn-primary btn-lg" type="submit" style="width:100%;">Request Quote</button>
+          </form>
+        </div>
+        <aside class="reassurance-panel">
+          <h2>Planning a wedding order?</h2>
+          <ul class="reassurance-list">
+            <li><i class="bi bi-clock" aria-hidden="true"></i> Confirm feasibility for your date within 1 business day.</li>
+            <li><i class="bi bi-image" aria-hidden="true"></i> One sample piece approved before full production.</li>
+            <li><i class="bi bi-percent" aria-hidden="true"></i> Bulk pricing applied automatically above 50 pieces.</li>
+          </ul>
+          <details class="faq-item">
+            <summary>How far in advance should we order?<i class="bi bi-plus-lg accordion-icon" aria-hidden="true"></i></summary>
+            <p>We recommend at least 4–6 weeks before your wedding date for bulk return-gift orders.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can every guest's gift be identical?<i class="bi bi-plus-lg accordion-icon" aria-hidden="true"></i></summary>
+            <p>Yes — most wedding orders use one shared design (e.g. your names and date), not per-guest personalization.</p>
+          </details>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- include:footer -->
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

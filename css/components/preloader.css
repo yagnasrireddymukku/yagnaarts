@@ -1,0 +1,46 @@
+/*
+  Full-viewport loading screen shown until the page (including images) has
+  finished loading — see js/modules/preloader.js for the fade-out trigger.
+  Markup lives at the top of src/components/header.html so it's the first
+  thing painted on every page.
+*/
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-preloader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-body);
+  transition: opacity var(--duration-slow) var(--ease-out-soft), visibility var(--duration-slow) var(--ease-out-soft);
+}
+.preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.preloader__mark {
+  position: relative;
+  z-index: 1;
+  animation: preloader-pulse 1.6s ease-in-out infinite;
+}
+.preloader__ring {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius-circle);
+  border: 2px solid var(--border-subtle);
+  border-top-color: var(--brand-emphasis);
+  animation: preloader-spin 1s linear infinite;
+}
+@keyframes preloader-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.9); opacity: 0.75; }
+}
+@keyframes preloader-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader__mark { animation: none; }
+  .preloader__ring { animation: none; }
+}

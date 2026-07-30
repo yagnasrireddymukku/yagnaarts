@@ -1,0 +1,53 @@
+{
+  "$schema": "Blog content. 'content' is a raw HTML string (rendered unescaped via {{{content}}} in blog-post.template.html) — paragraphs written directly as <p> tags rather than markdown, since there's no markdown-to-HTML step in the zero-dependency build.",
+  "posts": [
+    {
+      "id": "b-001",
+      "slug": "wedding-return-gifts-guests-actually-keep",
+      "title": "5 Wedding Return Gift Ideas Guests Will Actually Keep",
+      "category": "Wedding Gifts",
+      "author": "Yagna Sri",
+      "publishDate": "2026-01-14",
+      "readingTime": "5 min read",
+      "heroImage": "https://images.pexels.com/photos/7400865/pexels-photo-7400865.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "excerpt": "Most wedding return gifts end up in a drawer within a week. Here's what actually gets kept — and how to order it without the bulk-order headaches.",
+      "content": "<p>If you've been to enough Indian weddings, you know the drill: a small box, a sweet, maybe a keychain, and by the following month you can't remember which wedding it was from. Return gifts have a reputation problem — not because couples don't care, but because the default options are forgettable by design.</p><p>The gifts that survive past the wedding week share one trait: they're personalized with something specific to the couple, not just branded with a logo of two intertwined initials. A resin coaster with your actual wedding date and a monogram reads differently than a generic \"Thank You\" printed on a mug.</p><h2>1. Personalized date coasters</h2><p>A set that guests will genuinely use at home — durable, dishwasher-adjacent (hand wash recommended), and a quiet reminder of your day every time they set down a cup of chai.</p><h2>2. Mini photo frames with a candid shot</h2><p>Skip the posed portrait. A candid moment from the mandap or reception, cast into a small frame, feels like a keepsake rather than merchandise.</p><h2>3. Nameplates for newly married guests</h2><p>If a close friend or cousin is also newly married, a small personalized nameplate for their door is a return gift that becomes part of their home.</p><h2>4. Pooja tray sets for family elders</h2><p>For grandparents and elders, a resin pooja tray with a traditional motif respects the occasion without being generic religious merchandise.</p><h2>5. Bookmark sets for the readers in your circle</h2><p>An underrated, budget-friendly option for guests who'd rather have something useful and quiet than another showpiece.</p><h2>Ordering in bulk without the stress</h2><p>Whatever you choose, ask for one sample piece before committing to your full guest count — it's the single biggest thing that prevents a surprise two weeks before the wedding. We cover our own process for this on the <a href=\"/pages/wedding-gifting.html\">Wedding Gifting</a> page.</p>"
+    },
+    {
+      "id": "b-002",
+      "slug": "how-to-care-for-resin-keepsakes",
+      "title": "How to Care for Your Resin Keepsakes: A Complete Guide",
+      "category": "Resin Art Care",
+      "author": "Yagna Sri",
+      "publishDate": "2025-11-02",
+      "readingTime": "4 min read",
+      "heroImage": "https://images.pexels.com/photos/6858596/pexels-photo-6858596.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "excerpt": "Resin is more durable than people expect, but a few care habits make the difference between a piece that stays glossy for years and one that dulls in months.",
+      "content": "<p>One of the most common questions we get after an order ships is some version of \"how do I keep this looking new?\" The honest answer is that resin is fairly low-maintenance, but it isn't maintenance-free — a handful of simple habits protect the finish for years.</p><h2>Keep it out of direct, prolonged sunlight</h2><p>UV exposure is the single biggest long-term risk to clear resin. It won't happen overnight, but a piece left on a sun-drenched windowsill for months can gradually yellow, and any preserved flowers or photos inside will fade faster than they would in indirect light.</p><h2>Dry dusting over wet wiping for textured pieces</h2><p>For pieces with raised botanical texture or metallic leaf inclusions, a dry microfiber cloth or soft brush is safer than a damp one — moisture can work into texture seams over time.</p><h2>Skip the household chemical cleaners</h2><p>Glass cleaner, alcohol wipes, and nail polish remover are common culprits behind a suddenly cloudy resin surface. Soap and water, used sparingly, is all most pieces need.</p><h2>Mind the heat</h2><p>Resin softens well before it visibly melts — avoid leaving pieces on a car dashboard in peak sun or directly on a stovetop-adjacent counter.</p><p>Every product page on our site includes care notes specific to that piece, and our full <a href=\"/pages/policies/care-instructions.html\">Care Instructions</a> page covers category-specific guidance for jewelry, decor, and clocks.</p>"
+    },
+    {
+      "id": "b-003",
+      "slug": "corporate-diwali-gifting-beyond-generic-hampers",
+      "title": "Corporate Diwali Gifting: Beyond the Generic Hamper",
+      "category": "Corporate Gifting",
+      "author": "Yagna Sri",
+      "publishDate": "2025-10-06",
+      "readingTime": "6 min read",
+      "heroImage": "https://images.pexels.com/photos/8092466/pexels-photo-8092466.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "excerpt": "Dry fruit boxes and generic diyas rarely get remembered past the festival week. Here's how HR and procurement teams are rethinking Diwali gifting.",
+      "content": "<p>Every October, the same conversation happens in HR and admin teams across the country: what do we send clients and employees for Diwali that isn't another dry-fruit box? The category has a low bar, which is actually an opportunity — it doesn't take much to stand out.</p><h2>Why the standard hamper underdelivers</h2><p>Dry fruits, sweets, and generic diyas are consumable or forgettable by design. They signal effort spent on procurement, not thought spent on the relationship.</p><h2>What actually lands well</h2><p>A branded resin paperweight or desk piece with the recipient's name or your company's logo worked into the finish (not printed on top) tends to stay on a desk for years rather than a pantry shelf for a week. For client gifting specifically, pairing a personalized piece with a short handwritten note outperforms a bigger, more generic hamper almost every time.</p><h2>Planning around the calendar</h2><p>Festival-season demand is real — production slots fill up fastest in the two weeks before Diwali. Corporate orders placed in September have far more flexibility on design and bulk pricing than those placed in the last week of October.</p><h2>Budgeting for scale</h2><p>Per-unit pricing on personalized corporate gifting improves meaningfully at 25+ and 100+ unit tiers. If you're planning both client and employee gifting, it's worth quoting both together even if they ship separately.</p><p>We go deeper on invoicing, bulk pricing, and lead times on our <a href=\"/pages/corporate-gifting.html\">Corporate Gifting</a> page.</p>"
+    },
+    {
+      "id": "b-004",
+      "slug": "2026-home-decor-trends-where-resin-art-fits-in",
+      "title": "2026 Home Decor Trends: Where Resin Art Fits In",
+      "category": "Home Decor Trends",
+      "author": "Yagna Sri",
+      "publishDate": "2026-02-18",
+      "readingTime": "5 min read",
+      "heroImage": "https://images.pexels.com/photos/7256845/pexels-photo-7256845.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "excerpt": "Warm materials, visible craftsmanship, and one-of-a-kind statement pieces are replacing uniform, mass-produced decor this year — resin sits right in the middle of that shift.",
+      "content": "<p>Home decor has been drifting away from uniform, catalog-matched rooms for a few years now, and 2026 is leaning further into it: rooms that look collected over time, not purchased in one trip.</p><h2>Texture and translucency over flat surfaces</h2><p>Resin's natural depth — the way light passes through layered pours — fits a broader move toward materials that change appearance depending on the light in the room, rather than flat matte surfaces.</p><h2>Botanical preservation as decor, not just keepsake</h2><p>Preserved real flowers and fern in resin wall panels are increasingly being chosen as standalone decor pieces, not just sentimental keepsakes — the plant material reads as intentional, not as filler.</p><h2>Gold accents, used sparingly</h2><p>Full gold-leaf statement pieces are giving way to smaller, more deliberate gold-fleck accents — a little goes further when it's paired with a darker or more saturated base tone.</p><h2>One statement piece over many small ones</h2><p>Rather than a shelf full of small trinkets, more homes are opting for a single larger, more considered piece — a clock, a wall panel, a tray — as the room's anchor.</p><p>Our <a href=\"/collections/luxury-collection/\">Luxury Collection</a> and <a href=\"/collections/home-decor/\">Home Decor</a> collection both lean into this — fewer, larger, more intentional pieces rather than volume.</p>"
+    }
+  ]
+}

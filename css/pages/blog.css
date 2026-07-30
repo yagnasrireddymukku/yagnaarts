@@ -1,0 +1,110 @@
+/*
+  Blog index grid + individual post layout.
+*/
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+@media (max-width: 991px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .blog-grid { grid-template-columns: 1fr; } }
+
+.blog-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-base) var(--ease-out-soft), box-shadow var(--duration-base) var(--ease-out-soft);
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.blog-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.blog-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-card__body {
+  padding: 1.2rem;
+}
+.blog-card__category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-text);
+}
+.blog-card__title {
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+}
+.blog-card__excerpt {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+.blog-card__meta {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+}
+
+.blog-category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual post */
+.blog-post-hero {
+  aspect-ratio: 21 / 9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+}
+.blog-post-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-post-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.blog-post-body {
+  max-width: 72ch;
+  margin-inline: auto;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+.blog-post-body h2 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+.blog-post-body p {
+  margin-bottom: 1.1rem;
+  color: var(--text-primary);
+}
+.blog-post-body a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}

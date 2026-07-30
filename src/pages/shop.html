@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t=localStorage.getItem('ya-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
+<title>Shop All Pieces | YagnaArts</title>
+<meta name="description" content="Browse every YagnaArts collection — personalized gifts, wedding keepsakes, home decor, jewelry, corporate gifting, and more. Filter by price, availability, and customization.">
+<link rel="canonical" href="https://yagnasrireddymukku.github.io/yagnaarts/pages/shop.html">
+<meta name="theme-color" content="#0E3A5F">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shop All Pieces | YagnaArts">
+<meta property="og:description" content="Browse every YagnaArts collection — personalized gifts, wedding keepsakes, home decor, jewelry, corporate gifting, and more.">
+<meta property="og:image" content="https://images.pexels.com/photos/7256845/pexels-photo-7256845.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<meta property="og:url" content="https://yagnasrireddymukku.github.io/yagnaarts/pages/shop.html">
+<meta property="og:site_name" content="YagnaArts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shop All Pieces | YagnaArts">
+<meta name="twitter:description" content="Browse every YagnaArts collection — personalized gifts, wedding keepsakes, home decor, jewelry, corporate gifting, and more.">
+<meta name="twitter:image" content="https://images.pexels.com/photos/7256845/pexels-photo-7256845.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/brand/apple-touch-icon.png">
+<link rel="preload" href="/fonts/playfair_normal_700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins_normal_400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/pages/shop.css">
+</head>
+<body>
+
+<!-- include:header -->
+
+<main id="main">
+  <section class="shop-hero" style="background-image:linear-gradient(rgba(13,13,16,.55),rgba(13,13,16,.35)), url('/assets/uploads/images/hero.png');">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb shop-hero-breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Shop</li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Every Collection</span>
+      <h1>Shop All Pieces</h1>
+      <p>Every YagnaArts collection in one place — filter by price, availability, and customization, or jump straight to an occasion below.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="shop-collection-chips">
+        {{#each collections}}<a class="shop-collection-chip" href="/collections/{{this.slug}}/">{{this.name}}</a>{{/each}}
+      </div>
+
+      <div class="shop-layout">
+        <aside class="shop-filters">
+          <h2 class="shop-filters__title">Filter</h2>
+          <details class="shop-filter-group" open>
+            <summary>Price<i class="bi bi-chevron-down accordion-icon" aria-hidden="true"></i></summary>
+            <div class="shop-filter-body">
+              <label><input type="checkbox"> Under &#8377;1,000</label>
+              <label><input type="checkbox"> &#8377;1,000 &ndash; &#8377;2,500</label>
+              <label><input type="checkbox"> &#8377;2,500 &ndash; &#8377;5,000</label>
+              <label><input type="checkbox"> Above &#8377;5,000</label>
+            </div>
+          </details>
+          <details class="shop-filter-group">
+            <summary>Occasion<i class="bi bi-chevron-down accordion-icon" aria-hidden="true"></i></summary>
+            <div class="shop-filter-body">
+              <label><input type="checkbox"> Wedding</label>
+              <label><input type="checkbox"> Festival</label>
+              <label><input type="checkbox"> Corporate</label>
+              <label><input type="checkbox"> Everyday / Home</label>
+            </div>
+          </details>
+          <details class="shop-filter-group">
+            <summary>Availability<i class="bi bi-chevron-down accordion-icon" aria-hidden="true"></i></summary>
+            <div class="shop-filter-body">
+              <label><input type="checkbox"> Ready to ship</label>
+              <label><input type="checkbox"> Made to order</label>
+            </div>
+          </details>
+          <button class="btn btn-outline btn-sm" type="button" data-clear-filters style="width:100%; margin-top:.5rem;">Clear filters</button>
+        </aside>
+
+        <div class="shop-results">
+          <div class="shop-results__bar">
+            <span class="text-muted" data-result-count>{{products.length}} pieces</span>
+            <label class="shop-sort">
+              <span class="visually-hidden">Sort by</span>
+              <select data-sort-select>
+                <option value="featured">Best Match</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="new">Newest</option>
+              </select>
+            </label>
+          </div>
+          <div class="shop-grid" data-product-grid>
+            {{#each products}}{{> product-card}}{{/each}}
+          </div>
+          <p class="text-muted" style="margin-top:1.5rem; font-size:.85rem;"><i class="bi bi-info-circle" aria-hidden="true"></i> Filtering and sorting activate in Phase 10 — every piece in the catalog is already listed above.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- include:footer -->
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

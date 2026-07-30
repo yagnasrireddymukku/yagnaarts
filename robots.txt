@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /data/
+Disallow: /pages/cart.html
+Disallow: /pages/checkout.html
+Disallow: /pages/checkout-confirmation.html
+Disallow: /pages/wishlist.html
+Disallow: /pages/search.html
+
+Sitemap: https://yagnasrireddymukku.github.io/yagnaarts/sitemap.xml

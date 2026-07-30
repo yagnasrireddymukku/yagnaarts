@@ -1,0 +1,156 @@
+/*
+  Form components — floating-label inputs, textareas, selects, checkboxes,
+  file drop-zones. Spec: docs/phase-4-design-system.md §9.3. Validation
+  states (.is-invalid / .field-error) are styled here but wired up in
+  Phase 11 (Forms Integration).
+*/
+
+/* NOTE: the floating-label trick below relies on the CSS :placeholder-shown
+   pseudo-class, which only fires when an input actually HAS a placeholder
+   attribute. Every <input>/<textarea> using .form-field must include
+   placeholder=" " (a single space) even though nothing visibly shows. */
+.form-field {
+  position: relative;
+  margin-bottom: 1.4rem;
+}
+.form-field input:not([type="checkbox"]):not([type="radio"]),
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 1.3rem 1rem 0.5rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+.form-field textarea {
+  min-height: 120px;
+  padding-top: 1.4rem;
+  resize: vertical;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: var(--focus-ring);
+}
+.form-field label {
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: top var(--duration-fast) var(--ease-standard), font-size var(--duration-fast), color var(--duration-fast);
+  background: transparent;
+}
+.form-field input:focus + label,
+.form-field input:not(:placeholder-shown) + label,
+.form-field textarea:focus + label,
+.form-field textarea:not(:placeholder-shown) + label,
+.form-field select:focus + label,
+.form-field select.has-value + label {
+  top: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--color-secondary-text);
+}
+
+.form-field--error input,
+.form-field--error select,
+.form-field--error textarea {
+  border-color: var(--color-error);
+}
+.form-error-msg {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin-top: 0.4rem;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.form-checkbox input {
+  margin-top: 0.2rem;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+@media (max-width: 575px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* File / photo drop-zone (Custom Orders intake) */
+.form-dropzone {
+  border: 1.5px dashed var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--duration-fast), background var(--duration-fast);
+  color: var(--text-muted);
+}
+.form-dropzone:hover,
+.form-dropzone.is-dragover {
+  border-color: var(--color-accent);
+  background: var(--bg-surface-alt);
+}
+.form-dropzone i {
+  font-size: 1.8rem;
+  color: var(--color-accent-text);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.form-dropzone input[type="file"] {
+  display: none;
+}
+
+/* Honeypot — visually and semantically hidden from real users, still in
+   the tab/DOM order for bots that fill every field blindly (Phase 11). */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Replaces a form in place once it submits successfully (Phase 11). */
+.form-success-panel {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--bg-surface-alt);
+  border-radius: var(--radius-lg);
+}
+.form-success-panel i {
+  font-size: 2.5rem;
+  color: var(--color-emerald);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.form-success-panel h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.form-success-panel p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}

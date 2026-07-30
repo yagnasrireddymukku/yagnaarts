@@ -1,0 +1,47 @@
+{
+  "$schema": "Shared FAQ content. 'showOnHome' marks the subset featured in the homepage FAQ preview (docs/phase-5-wireframes.md §1); the full set renders on /pages/faq.html.",
+  "faqs": [
+    {
+      "id": "f-001",
+      "question": "How long does a custom order take?",
+      "answer": "Most personalized pieces ship in 5–7 working days after you approve the digital proof; bulk wedding/corporate orders are quoted individually based on quantity.",
+      "showOnHome": true
+    },
+    {
+      "id": "f-002",
+      "question": "What if I don't like the proof?",
+      "answer": "You can request revisions before anything goes into production — we don't cast resin until you've approved the final design.",
+      "showOnHome": true
+    },
+    {
+      "id": "f-003",
+      "question": "Do you ship pan-India?",
+      "answer": "Yes — we currently ship across India with tracked courier partners; international shipping for NRI gifting is on our near-term roadmap.",
+      "showOnHome": true
+    },
+    {
+      "id": "f-004",
+      "question": "Can you handle bulk wedding or corporate orders?",
+      "answer": "Absolutely — share your quantity and deadline on our Corporate Gifting page and we'll confirm feasibility and pricing within one business day.",
+      "showOnHome": true
+    },
+    {
+      "id": "f-005",
+      "question": "How should I care for a resin piece?",
+      "answer": "Wipe with a soft, dry microfiber cloth. Avoid prolonged direct sunlight and full water submersion unless the specific product's care instructions say otherwise.",
+      "showOnHome": false
+    },
+    {
+      "id": "f-006",
+      "question": "What payment methods do you accept?",
+      "answer": "Online payment is launching soon. Until then, orders placed at checkout are confirmed and settled via WhatsApp or email — you'll never be charged without confirming details first.",
+      "showOnHome": false
+    },
+    {
+      "id": "f-007",
+      "question": "Can I return or exchange a personalized item?",
+      "answer": "Because personalized pieces are made specifically for you, they can't be returned for a change of mind — but if a piece arrives damaged or doesn't match your approved proof, we'll remake or refund it.",
+      "showOnHome": false
+    }
+  ]
+}

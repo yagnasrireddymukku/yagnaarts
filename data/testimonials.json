@@ -1,0 +1,37 @@
+{
+  "$schema": "Homepage and product-page testimonial content. Photos are verified royalty-free Pexels placeholders standing in for real customer photos — swap for real ones (with permission) as they're collected.",
+  "testimonials": [
+    {
+      "id": "t-001",
+      "name": "Karthik M.",
+      "context": "Pet Memorial Piece",
+      "rating": 5,
+      "quote": "I sent a blurry childhood photo of my dog and they turned it into the clearest little portrait. I cried opening the box.",
+      "photo": "https://images.pexels.com/photos/6102858/pexels-photo-6102858.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "id": "t-002",
+      "name": "Meera & Arjun",
+      "context": "Wedding Return Gifts",
+      "rating": 5,
+      "quote": "We ordered 120 return gifts for our wedding — every single one was consistent and arrived two days ahead of our deadline.",
+      "photo": "https://images.pexels.com/photos/9969335/pexels-photo-9969335.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "id": "t-003",
+      "name": "Rohit S.",
+      "context": "Corporate Gifting, Pune",
+      "rating": 5,
+      "quote": "Our client Diwali hampers finally felt premium instead of generic. HR is already asking to reorder for next year.",
+      "photo": "https://images.pexels.com/photos/6724917/pexels-photo-6724917.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "id": "t-004",
+      "name": "Divya K.",
+      "context": "Home Decor Piece",
+      "rating": 5,
+      "quote": "The proof step made me trust an Instagram-only-feeling brand enough to spend on something this personal. Worth every rupee.",
+      "photo": "https://images.pexels.com/photos/16902222/pexels-photo-16902222.jpeg?auto=compress&cs=tinysrgb&w=200"
+    }
+  ]
+}

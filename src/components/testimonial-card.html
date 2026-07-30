@@ -1,0 +1,20 @@
+<!--
+  Single testimonial slide, rendered once per item inside an #each loop over
+  data.testimonials (see scripts/build.js partial support).
+  Star rendering is intentionally static (5 icons) rather than looped from
+  {{rating}} — the curated homepage testimonials are all 5-star quotes, and a
+  numeric-loop helper isn't worth adding to the build templating engine for
+  one section. Phase 9's full /pages/about.html#reviews (mixed ratings) will
+  render stars client-side in JS instead.
+-->
+<div class="t-card">
+  <span class="t-stars">
+    <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+    <span class="visually-hidden">{{rating}} out of 5 stars</span>
+  </span>
+  <p class="t-quote">&ldquo;{{quote}}&rdquo;</p>
+  <div class="t-person">
+    <img class="t-avatar" src="{{photo}}" alt="" loading="lazy" width="42" height="42">
+    <div><b>{{name}}</b><span>{{context}}</span></div>
+  </div>
+</div>

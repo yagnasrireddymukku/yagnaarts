@@ -1,0 +1,15 @@
+<!--
+  Single blog post card, rendered once per item inside an #each loop over
+  data.blogPosts (see scripts/build.js partial support).
+-->
+<a class="blog-card" href="/blog/{{slug}}/">
+  <div class="blog-card__media">
+    <img src="{{heroImage}}" alt="{{title}}" loading="lazy" width="400" height="260">
+  </div>
+  <div class="blog-card__body">
+    <span class="blog-card__category">{{category}}</span>
+    <h3 class="blog-card__title">{{title}}</h3>
+    <p class="blog-card__excerpt">{{excerpt}}</p>
+    <span class="blog-card__meta">{{publishDate}} &middot; {{readingTime}}</span>
+  </div>
+</a>

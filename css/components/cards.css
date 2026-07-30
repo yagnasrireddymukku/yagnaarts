@@ -1,0 +1,221 @@
+/*
+  Card family: product cards, category cards, testimonial cards.
+  Spec source: docs/phase-4-design-system.md §9.1, phase-6 hi-fi mockup.
+*/
+
+/* ---------- Product card ---------- */
+.p-card {
+  scroll-snap-align: start;
+  flex: 0 0 clamp(210px, 26vw, 270px);
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-base) var(--ease-out-soft),
+    box-shadow var(--duration-base) var(--ease-out-soft);
+  text-decoration: none;
+  color: var(--text-primary);
+  display: block;
+}
+.p-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.p-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--bg-surface-alt);
+}
+.p-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out-soft);
+}
+.p-card:hover .p-media img {
+  transform: scale(1.06);
+}
+.p-badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-gold);
+  color: #181104;
+}
+.p-badge--limited {
+  background: var(--gradient-rosegold);
+  color: #2e1810;
+}
+.p-wish {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-circle);
+  border: none;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.p-wish.is-active {
+  color: var(--color-secondary-text);
+}
+.p-wish.is-active i::before {
+  content: "\f415"; /* bi-heart-fill */
+}
+.p-body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+.p-cat {
+  font-size: 0.72rem;
+  color: var(--color-secondary-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.p-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  font-family: var(--font-body);
+}
+.p-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+.p-price {
+  font-weight: 700;
+}
+.p-price s {
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 0.4rem;
+  font-size: 0.82rem;
+}
+.p-rating {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.p-rating i {
+  color: var(--color-accent-text);
+}
+
+.scroller {
+  display: flex;
+  gap: 1.3rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-block: 0.3rem 0.8rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-subtle) transparent;
+}
+.scroller::-webkit-scrollbar { height: 6px; }
+.scroller::-webkit-scrollbar-thumb { background: var(--border-subtle); border-radius: 3px; }
+
+/* ---------- Category card ---------- */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.1rem;
+}
+@media (max-width: 991px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 575px) { .cat-grid { gap: 0.7rem; } }
+
+.cat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  transition: transform var(--duration-slow) var(--ease-out-soft),
+    box-shadow var(--duration-slow) var(--ease-out-soft), border-color var(--duration-slow);
+}
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+.cat-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface-alt);
+  color: var(--brand-emphasis);
+  font-size: 1.3rem;
+}
+.cat-card span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ---------- Testimonial card ---------- */
+.t-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+.t-stars {
+  color: var(--color-accent-text);
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+}
+.t-quote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.t-person {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+.t-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+}
+.t-person b {
+  font-size: 0.88rem;
+  display: block;
+}
+.t-person span {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}

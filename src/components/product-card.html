@@ -1,0 +1,24 @@
+<!--
+  Single product card, rendered once per item inside an #each loop over any
+  product array (see scripts/build.js partial support, invoked with a
+  double-brace-angle-bracket "product-card" reference). Data context here is
+  one product object from data/products.json directly (no "this." prefix,
+  unlike the raw #each body).
+-->
+<a class="p-card" href="/product/{{slug}}/" data-price="{{price}}" data-rating="{{rating}}" data-availability="{{availability}}" data-production-type="{{productionTime.type}}" data-customizable="{{customizable}}">
+  <div class="p-media">
+    <img src="{{images.0}}" alt="{{name}}" loading="lazy" width="400" height="400">
+    {{#if badge}}<span class="p-badge">{{badge}}</span>{{/if}}
+    <button class="p-wish" aria-label="Add to wishlist" data-wishlist-toggle data-product-id="{{id}}">
+      <i class="bi bi-heart" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="p-body">
+    <div class="p-cat">{{sku}}</div>
+    <div class="p-name">{{name}}</div>
+    <div class="p-meta">
+      <span class="p-price">&#8377;{{price}}{{#if compareAtPrice}} <s>&#8377;{{compareAtPrice}}</s>{{/if}}</span>
+      <span class="p-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>{{rating}}</span>
+    </div>
+  </div>
+</a>

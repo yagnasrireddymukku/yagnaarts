@@ -1,0 +1,13 @@
+{
+  "name": "yagnaarts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "YagnaArts — premium handmade resin art e-commerce platform. Static HTML/CSS/vanilla-JS site with a zero-dependency Node build step for pre-rendering product/collection/blog pages from the JSON catalog.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "watch": "node scripts/watch.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

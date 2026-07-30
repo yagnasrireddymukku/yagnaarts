@@ -1,0 +1,54 @@
+/*
+  Numbered step timeline — used for "How Custom Orders Work" on the homepage
+  and again on /pages/custom-orders.html. Numbering is meaningful here (a
+  real ordered process), unlike decorative 01/02/03 markers.
+*/
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+@media (max-width: 850px) { .timeline { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 575px) { .timeline { grid-template-columns: 1fr; } }
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: var(--border-subtle);
+}
+@media (max-width: 850px) { .timeline::before { display: none; } }
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-circle);
+  background: var(--bg-surface);
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent-text);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.step h3 {
+  font-size: 1.05rem;
+}
+.step p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}

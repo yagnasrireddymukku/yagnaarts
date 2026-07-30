@@ -1,0 +1,165 @@
+{
+  "$schema": "Collection metadata — consumed by scripts/build.js to generate /collections/{slug}/index.html, and by the client-side shop filter UI. A product belongs to a collection by listing the collection's slug in its own collections[] array (see products.json) — collections do not list their own products, to keep a single source of truth. heroImage values are verified royalty-free Pexels placeholders, mood-matched per collection.",
+  "collections": [
+    {
+      "slug": "personalized-gifts",
+      "name": "Personalized Gifts",
+      "cluster": "Gifting",
+      "tagline": "A name, a date, a memory — cast for keeps.",
+      "description": "Photo frames, nameplates, and keepsakes personalized with the names, dates, and photos that make a gift feel like it could only be for one person.",
+      "heroImage": "/assets/uploads/images/collections/personalized-gifts.jpg"
+    },
+    {
+      "slug": "wedding-collection",
+      "name": "Wedding Collection",
+      "cluster": "Occasions",
+      "tagline": "Return gifts and keepsakes guests actually keep.",
+      "description": "From bridal keepsakes to consistent, bulk-ready return gifts — designed for the logistics of Indian weddings without losing the personal touch.",
+      "heroImage": "/assets/uploads/images/collections/wedding.jpg"
+    },
+    {
+      "slug": "home-decor",
+      "name": "Home Decor",
+      "cluster": "Home & Lifestyle",
+      "tagline": "Resin pieces that anchor a room.",
+      "description": "Wall art, trays, clocks, and decor objects designed to be the piece people ask about when they visit.",
+      "heroImage": "/assets/uploads/images/collections/home-decor.jpg"
+    },
+    {
+      "slug": "kitchen-collection",
+      "name": "Kitchen Collection",
+      "cluster": "Home & Lifestyle",
+      "tagline": "Everyday objects, elevated.",
+      "description": "Coasters, trivets, and serving trays finished for both daily use and countertop display.",
+      "heroImage": "/assets/uploads/images/collections/tableware.jpg"
+    },
+    {
+      "slug": "office-collection",
+      "name": "Office Collection",
+      "cluster": "Home & Lifestyle",
+      "tagline": "A desk that looks like it means business.",
+      "description": "Paperweights, pen stands, and nameplates for a desk — or a client's — that deserves better than plastic.",
+      "heroImage": "https://images.pexels.com/photos/8092466/pexels-photo-8092466.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "jewelry",
+      "name": "Jewelry",
+      "cluster": "Home & Lifestyle",
+      "tagline": "Wearable resin, cast in miniature.",
+      "description": "Earrings, pendants, and rings featuring embedded botanicals, gold leaf, and personalized inclusions.",
+      "heroImage": "/assets/uploads/images/collections/jewellery.jpg"
+    },
+    {
+      "slug": "keychains",
+      "name": "Keychains",
+      "cluster": "Home & Lifestyle",
+      "tagline": "A pocket-sized keepsake.",
+      "description": "Initial, photo, and pet-portrait keychains — an accessible entry point into personalized resin.",
+      "heroImage": "/assets/uploads/images/collections/keychains.jpg"
+    },
+    {
+      "slug": "bookmarks",
+      "name": "Bookmarks",
+      "cluster": "Home & Lifestyle",
+      "tagline": "For the reader who deserves better than a folded page corner.",
+      "description": "Pressed-flower and botanical bookmarks, finished thin enough for daily use.",
+      "heroImage": "https://images.pexels.com/photos/3309961/pexels-photo-3309961.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "baby-collection",
+      "name": "Baby Collection",
+      "cluster": "Special",
+      "tagline": "First moments, kept forever.",
+      "description": "Handprint, footprint, and birth-detail keepsakes for new parents and baby showers.",
+      "heroImage": "https://images.pexels.com/photos/28680700/pexels-photo-28680700.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "pet-collection",
+      "name": "Pet Collection",
+      "cluster": "Special",
+      "tagline": "Because they're family too.",
+      "description": "Pet portrait and memorial pieces, handled with the same care as our most personal human keepsakes.",
+      "heroImage": "https://images.pexels.com/photos/37944305/pexels-photo-37944305.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "religious-collection",
+      "name": "Religious Collection",
+      "cluster": "Special",
+      "tagline": "Devotional pieces for home and gifting.",
+      "description": "Pooja tray sets, deity motifs, and festival-gifting pieces crafted with respect for tradition.",
+      "heroImage": "/assets/uploads/images/collections/spiritual.jpg"
+    },
+    {
+      "slug": "corporate-gifts",
+      "name": "Corporate Gifts",
+      "cluster": "Gifting",
+      "tagline": "Client and employee gifting that doesn't feel generic.",
+      "description": "Branded paperweights, awards, and hamper pieces — quoted and invoiced for bulk corporate orders.",
+      "heroImage": "https://images.pexels.com/photos/8092466/pexels-photo-8092466.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "memory-preservation",
+      "name": "Memory Preservation",
+      "cluster": "Gifting",
+      "tagline": "Flowers, letters, and fabric — held in resin, not a drawer.",
+      "description": "Wedding bouquets, baby clothes, handwritten letters, and other sentimental objects preserved as display-ready keepsakes.",
+      "heroImage": "/assets/uploads/images/collections/blood-resin.jpg"
+    },
+    {
+      "slug": "festival-collection",
+      "name": "Festival Collection",
+      "cluster": "Occasions",
+      "tagline": "Diwali, Rakhi, and festival gifting, refreshed each season.",
+      "description": "Diyas, trays, and hamper pieces designed around India's festival gifting calendar.",
+      "heroImage": "/assets/uploads/images/collections/rakhis.jpg"
+    },
+    {
+      "slug": "luxury-collection",
+      "name": "Luxury Collection",
+      "cluster": "Special",
+      "tagline": "Our most ambitious work.",
+      "description": "Statement pieces — larger scale, more intricate inclusions, premium finishing — for buyers who want the best the studio makes.",
+      "heroImage": "https://images.pexels.com/photos/7256845/pexels-photo-7256845.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "limited-edition",
+      "name": "Limited Edition",
+      "cluster": "Special",
+      "tagline": "Made once. Not made again.",
+      "description": "Small, genuinely limited runs — once a batch sells out, that specific design retires for good.",
+      "heroImage": "https://images.pexels.com/photos/7256567/pexels-photo-7256567.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "seasonal-collection",
+      "name": "Seasonal Collection",
+      "cluster": "Occasions",
+      "tagline": "What's in season at the studio right now.",
+      "description": "A rotating collection tied to the current gifting season — refreshed as festivals and occasions change through the year.",
+      "heroImage": "https://images.pexels.com/photos/815580/pexels-photo-815580.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+      "slug": "uv-resin",
+      "name": "UV Resin",
+      "cluster": "Special",
+      "tagline": "Glows under blacklight. Glass-clear in daylight.",
+      "description": "Pieces cast in UV-reactive resin that stay crystal-clear in normal light and glow under blacklight — a distinct finish alongside our standard epoxy work.",
+      "heroImage": "/assets/uploads/images/collections/uv-resin.jpg"
+    },
+    {
+      "slug": "storage-organizers",
+      "name": "Storage & Organizers",
+      "cluster": "Home & Lifestyle",
+      "tagline": "Trinket boxes and organizers worth leaving out.",
+      "description": "Lidded trinket boxes and desk organizers in cut-glass-inspired molds, finished in marbled, glitter, and botanical fills.",
+      "heroImage": "/assets/uploads/images/collections/storage-utility.jpg"
+    },
+    {
+      "slug": "name-stands",
+      "name": "Name Stands",
+      "cluster": "Home & Lifestyle",
+      "tagline": "A name, lit up.",
+      "description": "Freestanding personalized name plaques and photo stands, several with built-in LED lighting for a warm glow on any shelf.",
+      "heroImage": "/assets/uploads/images/collections/name-stands.jpg"
+    }
+  ]
+}

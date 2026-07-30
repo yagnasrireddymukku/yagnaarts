@@ -1,0 +1,68 @@
+/*
+  Button component — sizes and variants per docs/phase-4-design-system.md §9.2.
+  --gradient-cta / --brand-emphasis flip automatically between themes
+  (defined once in tokens.css), so this file never needs its own theme checks.
+*/
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: var(--min-touch-target);
+  transition: transform var(--duration-base) var(--ease-out-soft),
+    box-shadow var(--duration-base) var(--ease-out-soft),
+    background var(--duration-base) var(--ease-standard);
+}
+.btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--gradient-cta);
+  color: var(--brand-emphasis-contrast);
+}
+.btn-primary:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--text-primary);
+}
+.btn-outline:hover {
+  background: var(--color-accent);
+  color: #1a1a1d;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  min-height: 36px;
+}
+
+.btn-lg {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.02rem;
+  min-height: 52px;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

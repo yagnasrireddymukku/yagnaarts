@@ -1,0 +1,36 @@
+/*
+  Reusable pill-tab switcher (e.g. homepage "Shop by Collection").
+  Switching behavior is wired in Phase 10 (js/modules/tabs.js); until then
+  the first panel is the CSS default-visible state, so the section still
+  reads correctly as static content.
+*/
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.2rem;
+}
+.tab-btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+.tab-btn.is-active {
+  background: var(--brand-emphasis);
+  border-color: var(--brand-emphasis);
+  color: var(--brand-emphasis-contrast);
+}
+.tab-panel {
+  display: none;
+}
+.tab-panel.is-active {
+  display: block;
+}

@@ -1,0 +1,192 @@
+/*
+  YagnaArts Design Tokens
+  Source of truth: docs/phase-3-brand-identity.md, docs/phase-4-design-system.md
+  Every component file in /css/components and /css/pages must consume these
+  custom properties rather than hard-coding colors, spacing, radii, or shadows.
+*/
+
+:root {
+  /* ---- Brand color core ---- */
+  --color-primary: #0E3A5F;
+  --color-primary-light: #1E6091;
+  --color-secondary: #C08A6B;
+  --color-accent: #C9A24B;
+  --color-accent-light: #E8C874;
+  --color-emerald: #0F6B4C;
+  --color-error: #B3261E;
+
+  --gradient-ocean: linear-gradient(135deg, #0E3A5F 0%, #1E6091 100%);
+  --gradient-gold: linear-gradient(135deg, #C9A24B 0%, #E8C874 100%);
+  --gradient-rosegold: linear-gradient(135deg, #C08A6B 0%, #E7B7A3 100%);
+  --gradient-hero-light: linear-gradient(120deg, #FAF7F2 0%, #EFE6D8 45%, #E8C874 100%);
+  --gradient-hero-dark: linear-gradient(120deg, #0D0D10 0%, #14202B 55%, #0E3A5F 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.05));
+
+  /* ---- Light theme surface tokens (default) ---- */
+  --bg-body: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #EFE6D8;
+  --text-primary: #1A1A1D;
+  --text-muted: #5B5850;
+  --border-subtle: #E4DCCC;
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.4);
+
+  /* ---- Shadows (light theme) ---- */
+  --shadow-sm: 0 2px 8px rgba(20, 20, 25, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 20, 25, 0.08);
+  --shadow-lg: 0 16px 48px rgba(20, 20, 25, 0.12);
+  --shadow-glow: 0 8px 32px rgba(201, 162, 75, 0.35);
+
+  /* ---- Glass ---- */
+  --glass-blur: blur(16px);
+  --glass-saturate: saturate(160%);
+
+  /* ---- Typography ---- */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Poppins', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---- Radius scale ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --duration-hero: 900ms;
+
+  /* ---- Z-index scale ---- */
+  --z-base: 0;
+  --z-card-hover: 10;
+  --z-sticky-nav: 100;
+  --z-dropdown: 200;
+  --z-mobile-menu: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 410;
+  --z-toast: 500;
+  --z-back-to-top: 150;
+  --z-scroll-progress: 600;
+  --z-preloader: 700;
+
+  /* ---- Layout ---- */
+  --container-max: 1320px;
+  --container-max-wide: 1600px;
+  --container-padding-inline: clamp(1rem, 4vw, 2.5rem);
+  --grid-gutter: 1.5rem;
+
+  /* ---- Icon sizing ---- */
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 28px;
+  --icon-xl: 40px;
+
+  /* ---- Accessibility ---- */
+  --focus-ring: 0 0 0 3px var(--color-accent);
+  --min-touch-target: 44px;
+
+  /* ---- Theme-flipping semantic tokens ----
+     A handful of UI accents (logo mark, primary CTA fill) are Royal Sapphire
+     in light theme but flip to Gold Leaf in dark theme (see Phase 3 §2.4) —
+     gold reads as premium on black, sapphire reads as premium on cream.
+     Centralizing the flip here means components only ever reference one
+     variable and never need theme-specific selectors of their own. */
+  --brand-emphasis: var(--color-primary);
+  --brand-emphasis-contrast: #ffffff;
+  --gradient-cta: var(--gradient-ocean);
+
+  /* ---- Text-safe accent variants ----
+     --color-accent (#C9A24B) and --color-secondary (#C08A6B) measure 2.4:1
+     and 2.77:1 against these light-theme surfaces — both fail WCAG's 3:1
+     floor even for large text/graphics. These are darker, verified-passing
+     (4.5:1+) stand-ins for whenever accent/secondary is applied to actual
+     text or a meaningful icon rather than a filled background shape. Flips
+     lighter in dark theme, where the original colors already pass easily. */
+  --color-accent-text: #8a6a1f;
+  --color-secondary-text: #8a5a45;
+}
+
+/* ---- Dark theme: OS preference ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #0D0D10;
+    --bg-surface: #17171B;
+    --bg-surface-alt: #1E1E23;
+    --text-primary: #F5F1E8;
+    --text-muted: #B8B2A6;
+    --border-subtle: #2A2A30;
+    --glass-bg: rgba(23, 23, 27, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
+    --shadow-glow: 0 8px 32px rgba(30, 96, 145, 0.45);
+    --brand-emphasis: var(--color-accent);
+    --brand-emphasis-contrast: #181104;
+    --gradient-cta: var(--gradient-gold);
+    --color-accent-text: var(--color-accent-light);
+    --color-secondary-text: #E7B7A3;
+  }
+}
+
+/* ---- Dark theme: explicit user toggle (wins over OS preference) ---- */
+:root[data-theme="dark"] {
+  --bg-body: #0D0D10;
+  --bg-surface: #17171B;
+  --bg-surface-alt: #1E1E23;
+  --text-primary: #F5F1E8;
+  --text-muted: #B8B2A6;
+  --border-subtle: #2A2A30;
+  --glass-bg: rgba(23, 23, 27, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 8px 32px rgba(30, 96, 145, 0.45);
+  --brand-emphasis: var(--color-accent);
+  --brand-emphasis-contrast: #181104;
+  --gradient-cta: var(--gradient-gold);
+  --color-accent-text: var(--color-accent-light);
+  --color-secondary-text: #E7B7A3;
+}
+
+/* ---- Light theme: explicit user toggle (wins over OS preference) ---- */
+:root[data-theme="light"] {
+  --bg-body: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #EFE6D8;
+  --text-primary: #1A1A1D;
+  --text-muted: #5B5850;
+  --border-subtle: #E4DCCC;
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --shadow-sm: 0 2px 8px rgba(20, 20, 25, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 20, 25, 0.08);
+  --shadow-lg: 0 16px 48px rgba(20, 20, 25, 0.12);
+  --shadow-glow: 0 8px 32px rgba(201, 162, 75, 0.35);
+  --brand-emphasis: var(--color-primary);
+  --brand-emphasis-contrast: #ffffff;
+  --gradient-cta: var(--gradient-ocean);
+  --color-accent-text: #8a6a1f;
+  --color-secondary-text: #8a5a45;
+}

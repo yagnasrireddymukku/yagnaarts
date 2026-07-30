@@ -1,0 +1,40 @@
+/*
+  Shared prose layout for the four policy pages. Deliberately plain — per
+  Phase 3's tone-of-voice rule, policy content's job is trust-through-clarity,
+  not persuasion, so no glass panels or gradients here.
+*/
+
+.policy-content {
+  max-width: 72ch;
+  margin-inline: auto;
+}
+.policy-content h2 {
+  font-size: 1.3rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+.policy-content h2:first-child {
+  margin-top: 0;
+}
+.policy-content p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.policy-content ul,
+.policy-content ol {
+  color: var(--text-muted);
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+}
+.policy-content li {
+  margin-bottom: 0.5rem;
+}
+.policy-content strong {
+  color: var(--text-primary);
+}
+.policy-updated {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  display: block;
+}

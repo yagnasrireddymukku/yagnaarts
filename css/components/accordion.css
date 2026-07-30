@@ -1,0 +1,38 @@
+/*
+  Native <details>/<summary> accordion — used for FAQ (homepage preview and
+  the full /pages/faq.html) and for sidebar shop filters (Phase 9). Using
+  the native element means open/close, keyboard support, and screen-reader
+  semantics come from the browser for free.
+*/
+
+.faq-item {
+  border-bottom: 1px solid var(--border-subtle);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary .accordion-icon {
+  transition: transform var(--duration-base) var(--ease-out-soft);
+  flex-shrink: 0;
+  color: var(--color-accent-text);
+}
+.faq-item[open] summary .accordion-icon {
+  transform: rotate(45deg);
+}
+.faq-item p {
+  margin: 0 0 1.3rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  max-width: 65ch;
+}

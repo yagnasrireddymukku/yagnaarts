@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t=localStorage.getItem('ya-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
+<title>{{name}} | YagnaArts</title>
+<meta name="description" content="{{shortDescription}}">
+<link rel="canonical" href="{{canonicalUrl}}">
+<meta name="theme-color" content="#0E3A5F">
+
+<meta property="og:type" content="product">
+<meta property="og:title" content="{{name}} | YagnaArts">
+<meta property="og:description" content="{{shortDescription}}">
+<meta property="og:image" content="{{ogImage}}">
+<meta property="og:url" content="{{canonicalUrl}}">
+<meta property="og:site_name" content="YagnaArts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{name}} | YagnaArts">
+<meta name="twitter:description" content="{{shortDescription}}">
+<meta name="twitter:image" content="{{ogImage}}">
+{{{productJsonLd}}}
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/brand/apple-touch-icon.png">
+
+<link rel="preload" href="/fonts/playfair_normal_700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins_normal_400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/pages/product.css">
+</head>
+<body>
+
+<!-- include:header -->
+
+<main id="main" data-current-product-id="{{id}}">
+  <div class="container" style="padding-top:1.5rem;">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/pages/shop.html">Collections</a></li>
+        {{#if primaryCollection}}<li class="breadcrumb-item"><a href="/collections/{{primaryCollection.slug}}/">{{primaryCollection.name}}</a></li>{{/if}}
+        <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section pdp">
+    <div class="container pdp-grid">
+      <div class="pdp-gallery">
+        <div class="pdp-gallery-main">
+          <img id="pdpMainImage" src="{{images.0}}" alt="{{name}}" width="700" height="700" fetchpriority="high">
+        </div>
+        <div class="pdp-gallery-thumbs">
+          {{#each images}}
+          <button class="pdp-thumb" type="button" data-image="{{this}}" aria-label="Show image">
+            <img src="{{this}}" alt="" loading="lazy" width="90" height="90">
+          </button>
+          {{/each}}
+        </div>
+        <p class="text-muted" style="font-size:.78rem; margin-top:.5rem;"><i class="bi bi-info-circle" aria-hidden="true"></i> Thumbnail swapping and pinch-zoom activate in Phase 10.</p>
+      </div>
+
+      <div class="pdp-info">
+        <h1>{{name}}</h1>
+        <div class="pdp-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> {{rating}} <span class="text-muted">({{reviewCount}} reviews)</span> &middot; <span class="text-muted">SKU {{sku}}</span></div>
+
+        <div class="pdp-price">
+          &#8377;{{price}}
+          {{#if compareAtPrice}}<s>&#8377;{{compareAtPrice}}</s><span class="p-badge">Sale</span>{{/if}}
+        </div>
+
+        <p class="pdp-short">{{shortDescription}}</p>
+
+        {{#if customizable}}
+        <div class="pdp-customize">
+          <h2 class="pdp-subhead">Customize this piece</h2>
+          <ul class="pdp-custom-fields">
+            {{#each customizationFields}}<li><i class="bi bi-check-circle" aria-hidden="true"></i> {{this}}</li>{{/each}}
+          </ul>
+          <p class="text-muted" style="font-size:.8rem;">You'll be able to upload photos and enter these details after adding to cart — we send a digital proof before production begins.</p>
+        </div>
+        {{/if}}
+
+        <div class="pdp-production-badge">
+          <i class="bi bi-clock-history" aria-hidden="true"></i> {{productionLabel}}
+        </div>
+
+        <div class="pdp-qty-row">
+          <label for="pdpQty" class="visually-hidden">Quantity</label>
+          <div class="qty-stepper">
+            <button type="button" aria-label="Decrease quantity">&minus;</button>
+            <input type="number" id="pdpQty" value="1" min="1" inputmode="numeric">
+            <button type="button" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="pdp-cta-row">
+          <button class="btn btn-primary btn-lg" type="button" data-add-to-cart data-product-id="{{id}}">Add to Cart</button>
+          <button class="btn btn-outline btn-lg" type="button" data-buy-now data-product-id="{{id}}">Buy Now</button>
+        </div>
+
+        <div class="pdp-utility-row">
+          <button class="pdp-utility-btn" type="button" data-wishlist-toggle data-product-id="{{id}}"><i class="bi bi-heart" aria-hidden="true"></i> Wishlist</button>
+          <button class="pdp-utility-btn" type="button" data-share><i class="bi bi-share" aria-hidden="true"></i> Share</button>
+        </div>
+
+        <div class="pdp-info-links">
+          <a href="/pages/policies/shipping-returns.html"><i class="bi bi-truck" aria-hidden="true"></i> Shipping &amp; returns information</a>
+          <a href="/pages/policies/care-instructions.html"><i class="bi bi-droplet" aria-hidden="true"></i> Care instructions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="tabs" role="tablist" aria-label="Product details">
+        <button class="tab-btn is-active" data-tab="description" role="tab" aria-selected="true">Description</button>
+        <button class="tab-btn" data-tab="specs" role="tab" aria-selected="false">Specifications</button>
+        <button class="tab-btn" data-tab="care" role="tab" aria-selected="false">Care Instructions</button>
+        <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false">Reviews ({{reviewCount}})</button>
+      </div>
+      <div class="tab-panels pdp-tab-panels">
+        <div class="tab-panel is-active" id="tab-description"><p>{{description}}</p></div>
+        <div class="tab-panel" id="tab-specs">
+          <dl class="pdp-spec-list">
+            <dt>Material</dt><dd>{{material}}</dd>
+            <dt>Dimensions</dt><dd>{{dimensions}}</dd>
+            <dt>Availability</dt><dd>{{availability}}</dd>
+          </dl>
+        </div>
+        <div class="tab-panel" id="tab-care"><p>{{careInstructions}}</p></div>
+        <div class="tab-panel" id="tab-reviews">
+          <p><i class="bi bi-star-fill" aria-hidden="true"></i> {{rating}} average from {{reviewCount}} verified buyers.</p>
+          <p class="text-muted">Individual review listings and photo reviews launch with the account/backend work on the roadmap (see docs/phase-1-business-analysis.md future roadmap).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="related">
+    <div class="container">
+      <div class="row-head">
+        <div class="section-head" style="margin-bottom:0;">
+          <span class="eyebrow">You Might Also Like</span>
+          <h2 class="section-title">Related Pieces</h2>
+        </div>
+      </div>
+      <div class="scroller">{{#each relatedProducts}}{{> product-card}}{{/each}}</div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="recentlyViewed" data-recently-viewed hidden>
+    <div class="container">
+      <div class="row-head">
+        <div class="section-head" style="margin-bottom:0;">
+          <span class="eyebrow">Recently Viewed</span>
+          <h2 class="section-title">Pick up where you left off</h2>
+        </div>
+      </div>
+      <div class="scroller" data-recently-viewed-list></div>
+    </div>
+  </section>
+</main>
+
+<div class="pdp-sticky-bar" data-pdp-sticky-bar>
+  <div class="container pdp-sticky-bar__inner">
+    <div class="pdp-sticky-bar__price">&#8377;{{price}}</div>
+    <div class="pdp-sticky-bar__actions">
+      <button class="btn btn-outline" type="button" data-add-to-cart data-product-id="{{id}}">Add to Cart</button>
+      <button class="btn btn-primary" type="button" data-buy-now data-product-id="{{id}}">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- include:footer -->
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
