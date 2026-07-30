@@ -26,3 +26,6 @@ node_modules/
 
 # Claude Code local project settings — machine-specific, not for the repo
 .claude/
+
+# Local Netlify folder
+.netlify
