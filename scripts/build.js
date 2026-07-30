@@ -37,7 +37,7 @@ const SRC_COMPONENTS = path.join(ROOT, 'src', 'components');
 const SRC_TEMPLATES = path.join(ROOT, 'src', 'templates');
 const SRC_PAGES = path.join(ROOT, 'src', 'pages');
 const DATA_DIR = path.join(ROOT, 'data');
-const SITE_URL = 'https://yagnasrireddymukku.github.io/yagnaarts'; // update once the real domain is chosen (Phase 15)
+const SITE_URL = 'https://yagnasrireddymukku.github.io/yagynaarts'; // update once the real domain is chosen (Phase 15)
 
 const generatedUrls = [];
 
