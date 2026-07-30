@@ -64,22 +64,35 @@
 .primary-nav {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .primary-nav { display: block; }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.1rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 500;
+  white-space: nowrap;
+}
+@media (min-width: 1360px) {
+  .nav-links {
+    gap: 1.6rem;
+    font-size: 0.92rem;
+  }
 }
 .nav-links > li {
   position: relative;
+}
+.nav-links > li.has-mega {
+  /* Positioned relative to .site-header (sticky) instead, so the panel
+     can be wide and centered under the whole header regardless of which
+     trigger opened it, rather than boxed under a single nav item. */
+  position: static;
 }
 .nav-links a,
 .nav-link-btn {
@@ -105,23 +118,77 @@
 .has-mega .mega-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 1.1rem);
-  left: 0;
-  width: 560px;
-  max-width: calc(100vw - 2 * var(--space-5));
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(var(--container-max), calc(100vw - 2 * var(--space-5)));
+  margin-top: 1.1rem;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   padding: var(--space-6);
   gap: var(--space-6);
-  grid-template-columns: repeat(3, 1fr);
   z-index: var(--z-dropdown);
 }
-.has-mega.is-open .mega-menu,
-.has-mega:hover .mega-menu,
-.has-mega:focus-within .mega-menu {
-  display: grid;
+/* Opening/closing is JS-driven (mouseenter/focus/click all toggle
+   .is-open) so exactly one mega-menu is ever open — see initMegaMenus()
+   in js/modules/navigation.js. A pure-CSS :hover trigger here would let
+   a click-opened menu and a hover-opened sibling menu show at once. */
+.has-mega.is-open .mega-menu {
+  display: flex;
+  align-items: stretch;
+}
+.mega-menu__cols {
+  display: flex;
+  flex: 1;
+  gap: var(--space-6);
+  min-width: 0;
+}
+.mega-menu__cols .mega-col {
+  flex: 1;
+  min-width: 0;
+}
+.mega-menu__promos {
+  flex: 0 0 auto;
+  display: flex;
+  gap: var(--space-4);
+}
+.mega-menu__promo {
+  flex: 0 0 170px;
+  position: relative;
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+}
+.mega-menu__promo img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-out-soft);
+}
+.mega-menu__promo:hover img {
+  transform: scale(1.05);
+}
+.mega-menu__promo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 13, 16, 0.75), rgba(13, 13, 16, 0) 55%);
+}
+.mega-menu__promo span {
+  position: absolute;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
 }
 .mega-col h3 {
   font-family: var(--font-body);
@@ -147,6 +214,16 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
+}
+/* Below 420px the logo + 5 icon buttons don't fit on one row. Search and
+   theme-toggle already have equivalents inside the mobile menu (see
+   mobile-menu.html's #mobileSearchToggle / #mobileThemeToggle), so hide
+   the header's copies there rather than shrinking everything illegibly. */
+@media (max-width: 420px) {
+  #searchToggle,
+  #themeToggle {
+    display: none;
+  }
 }
 .icon-btn {
   position: relative;
@@ -184,7 +261,7 @@
   justify-content: center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #mobileMenuToggle { display: none; }
 }
 

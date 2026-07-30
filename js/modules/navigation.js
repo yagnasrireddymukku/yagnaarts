@@ -73,36 +73,62 @@ function initMobileMenu() {
 }
 
 function initMegaMenus() {
-  const megaItems = document.querySelectorAll('.has-mega');
+  const megaItems = Array.from(document.querySelectorAll('.has-mega'));
+  if (!megaItems.length) return;
+
+  let closeTimer = null;
+
+  function setOpen(item, isOpen) {
+    item.classList.toggle('is-open', isOpen);
+    item.querySelector('.nav-link-btn')?.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  function closeAll(except) {
+    megaItems.forEach((item) => {
+      if (item !== except) setOpen(item, false);
+    });
+  }
+
+  function openItem(item) {
+    window.clearTimeout(closeTimer);
+    closeAll(item);
+    setOpen(item, true);
+  }
+
+  function scheduleClose(item) {
+    window.clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(() => setOpen(item, false), 150);
+  }
+
   megaItems.forEach((item) => {
     const trigger = item.querySelector('.nav-link-btn');
     if (!trigger) return;
+
+    // Hover opens immediately and cancels any pending close from a sibling;
+    // leaving (mouse or focus) schedules a close so moving the pointer from
+    // the trigger into the panel below doesn't flicker it shut.
+    item.addEventListener('mouseenter', () => openItem(item));
+    item.addEventListener('mouseleave', () => scheduleClose(item));
+    item.addEventListener('focusin', () => openItem(item));
+    item.addEventListener('focusout', (e) => {
+      if (!item.contains(e.relatedTarget)) scheduleClose(item);
+    });
+
+    // Click toggles explicitly — the primary path for touch, where hover
+    // never fires.
     trigger.addEventListener('click', () => {
       const isOpen = item.classList.contains('is-open');
-      megaItems.forEach((other) => {
-        other.classList.remove('is-open');
-        other.querySelector('.nav-link-btn')?.setAttribute('aria-expanded', 'false');
-      });
-      if (!isOpen) {
-        item.classList.add('is-open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
+      if (isOpen) setOpen(item, false);
+      else openItem(item);
     });
   });
 
   document.addEventListener('click', (e) => {
-    megaItems.forEach((item) => {
-      if (!item.contains(e.target)) {
-        item.classList.remove('is-open');
-        item.querySelector('.nav-link-btn')?.setAttribute('aria-expanded', 'false');
-      }
-    });
+    if (!megaItems.some((item) => item.contains(e.target))) closeAll();
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      megaItems.forEach((item) => item.classList.remove('is-open'));
-    }
+    if (e.key === 'Escape') closeAll();
   });
 }
 
