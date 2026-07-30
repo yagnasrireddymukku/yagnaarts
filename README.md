@@ -58,7 +58,7 @@ Add an entry to `data/products.json` (see the existing entries for the schema) a
 
 Shared components use root-relative paths (`/css/main.css`, `/collections/...`, etc.), which assumes the site is served from a true domain root. This works out of the box on **Netlify, Vercel, and Cloudflare Pages**, and on **GitHub Pages with a custom domain**. A GitHub Pages *project* site without a custom domain (`username.github.io/resin/`) would need either a `<base>` tag adjustment or a custom domain.
 
-Ready-to-use deployment configs already exist: `netlify.toml` (recommended host), `.github/workflows/ci.yml` (build validation on every push), and `.github/workflows/deploy-gh-pages.yml` (optional, GitHub Pages only). Before your first deploy, run `node scripts/set-site-url.js https://your-real-domain.com` to replace the placeholder domain baked into canonical/OG/JSON-LD tags. Full walkthrough, DNS setup, and a consolidated go-live checklist: [`docs/phase-15-deployment-guide.md`](docs/phase-15-deployment-guide.md).
+Ready-to-use deployment config already exists: `netlify.toml` (recommended host) and `.github/workflows/ci.yml` (build validation on every push). The site is deployed on Netlify, connected to this repo with automatic deploys on every push to `main`. Before pointing the site at a new domain, run `node scripts/set-site-url.js https://your-real-domain.com` to replace the placeholder domain baked into canonical/OG/JSON-LD tags. Full walkthrough and go-live checklist: [`docs/phase-15-deployment-guide.md`](docs/phase-15-deployment-guide.md).
 
 ## Tech stack
 
