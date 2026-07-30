@@ -10,4 +10,4 @@ Disallow: /pages/checkout-confirmation.html
 Disallow: /pages/wishlist.html
 Disallow: /pages/search.html
 
-Sitemap: https://yagynaarts.netlify.app/sitemap.xml
+Sitemap: https://yagnaarts.netlify.app/sitemap.xml

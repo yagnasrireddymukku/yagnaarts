@@ -37,7 +37,7 @@ const SRC_COMPONENTS = path.join(ROOT, 'src', 'components');
 const SRC_TEMPLATES = path.join(ROOT, 'src', 'templates');
 const SRC_PAGES = path.join(ROOT, 'src', 'pages');
 const DATA_DIR = path.join(ROOT, 'data');
-const SITE_URL = 'https://yagynaarts.netlify.app'; // update once the real domain is chosen (Phase 15)
+const SITE_URL = 'https://yagnaarts.netlify.app'; // update once the real domain is chosen (Phase 15)
 
 const generatedUrls = [];
 
